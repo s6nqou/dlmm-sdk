@@ -98,31 +98,31 @@ pub fn assert_eq_launch_pool_admin(admin: Pubkey) -> bool {
 pub mod lb_clmm {
     use super::*;
 
-    pub fn initialize_lb_pair(
-        ctx: Context<InitializeLbPair>,
-        active_id: i32,
-        bin_step: u16,
-    ) -> Result<()> {
-        instructions::initialize_pool::initialize_permissionless_lb_pair::handle(
-            ctx, active_id, bin_step,
-        )
-    }
+    // pub fn initialize_lb_pair(
+    //     ctx: Context<InitializeLbPair>,
+    //     active_id: i32,
+    //     bin_step: u16,
+    // ) -> Result<()> {
+    //     instructions::initialize_pool::initialize_permissionless_lb_pair::handle(
+    //         ctx, active_id, bin_step,
+    //     )
+    // }
 
-    pub fn initialize_customizable_permissionless_lb_pair(
-        ctx: Context<InitializeCustomizablePermissionlessLbPair>,
-        params: CustomizableParams,
-    ) -> Result<()> {
-        instructions::initialize_pool::initialize_customizable_permissionless_lb_pair::handle(
-            ctx, params,
-        )
-    }
+    // pub fn initialize_customizable_permissionless_lb_pair(
+    //     ctx: Context<InitializeCustomizablePermissionlessLbPair>,
+    //     params: CustomizableParams,
+    // ) -> Result<()> {
+    //     instructions::initialize_pool::initialize_customizable_permissionless_lb_pair::handle(
+    //         ctx, params,
+    //     )
+    // }
 
-    pub fn initialize_permission_lb_pair(
-        ctx: Context<InitializePermissionLbPair>,
-        ix_data: InitPermissionPairIx,
-    ) -> Result<()> {
-        instructions::initialize_pool::initialize_permission_lb_pair::handle(ctx, ix_data)
-    }
+    // pub fn initialize_permission_lb_pair(
+    //     ctx: Context<InitializePermissionLbPair>,
+    //     ix_data: InitPermissionPairIx,
+    // ) -> Result<()> {
+    //     instructions::initialize_pool::initialize_permission_lb_pair::handle(ctx, ix_data)
+    // }
 
     pub fn initialize_bin_array_bitmap_extension(
         ctx: Context<InitializeBinArrayBitmapExtension>,
