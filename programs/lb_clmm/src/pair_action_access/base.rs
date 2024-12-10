@@ -8,7 +8,7 @@ use crate::state::lb_pair::LbPair;
 use crate::state::lb_pair::PairType;
 use anchor_lang::prelude::*;
 use num_enum::{IntoPrimitive, TryFromPrimitive};
-use solana_program::pubkey::Pubkey;
+
 #[derive(Copy, Clone, Debug, PartialEq, Eq, IntoPrimitive, TryFromPrimitive)]
 #[repr(u8)]
 /// Type of the activation

@@ -34,7 +34,7 @@ use instructions::withdraw_ineligible_reward::*;
 use instructions::withdraw_protocol_fee::*;
 
 #[cfg(feature = "localnet")]
-declare_id!("LbVRzDTvBDEcrthxfZ4RL6yiq3uZw8bS6MwtdY6UhFQ");
+declare_id!("8evfxdBdiETLTBKXRgdnNYoQhC3TDd59t9Vwuszw5SYJ");
 
 #[cfg(feature = "staging")]
 declare_id!("tLBro6JJuZNnpoad3p8pXKohE9f7f7tBZJpaeh6pXt1");
@@ -44,7 +44,6 @@ declare_id!("LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo");
 
 pub mod admin {
     use super::*;
-    use anchor_lang::solana_program::pubkey;
 
     #[cfg(feature = "localnet")]
     pub const ADMINS: [Pubkey; 1] = [pubkey!("bossj3JvwiNK7pvjr149DqdtJxf2gdygbcmEPTkb2F1")];
@@ -59,7 +58,6 @@ pub mod admin {
 
 pub mod launch_pool_config_admins {
     use super::*;
-    use anchor_lang::solana_program::pubkey;
 
     #[cfg(feature = "localnet")]
     pub const ADMINS: [Pubkey; 1] = [pubkey!("bossj3JvwiNK7pvjr149DqdtJxf2gdygbcmEPTkb2F1")];
@@ -74,15 +72,15 @@ pub mod launch_pool_config_admins {
 }
 
 /// Authorized pubkey to withdraw protocol fee
-pub mod fee_owner {
-    use super::*;
+// pub mod fee_owner {
+//     use super::*;
 
-    #[cfg(feature = "localnet")]
-    declare_id!("bossj3JvwiNK7pvjr149DqdtJxf2gdygbcmEPTkb2F1");
+//     #[cfg(feature = "localnet")]
+//     declare_id!("bossj3JvwiNK7pvjr149DqdtJxf2gdygbcmEPTkb2F1");
 
-    #[cfg(not(feature = "localnet"))]
-    declare_id!("6WaLrrRfReGKBYUSkmx2K6AuT21ida4j8at2SUiZdXu8");
-}
+//     #[cfg(not(feature = "localnet"))]
+//     declare_id!("6WaLrrRfReGKBYUSkmx2K6AuT21ida4j8at2SUiZdXu8");
+// }
 
 pub fn assert_eq_admin(admin: Pubkey) -> bool {
     crate::admin::ADMINS

@@ -10,7 +10,7 @@ use crate::{
     errors::LBError,
 };
 use anchor_lang::prelude::*;
-use solana_program::pubkey::Pubkey;
+
 pub struct PermissionLbPairActionAccess {
     is_enabled: bool,
     pre_activation_swap_address: Pubkey,

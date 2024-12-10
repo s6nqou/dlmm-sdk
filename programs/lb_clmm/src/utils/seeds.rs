@@ -1,5 +1,4 @@
 use anchor_lang::prelude::*;
-use anchor_lang::solana_program::pubkey;
 
 #[constant]
 pub const BIN_ARRAY: &[u8] = b"bin_array";
